@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
+	import 'normalize.css';
 	import './styles.css';
 </script>
 
@@ -15,7 +16,7 @@
 	</footer>
 </div>
 
-<style>
+<style lang="scss">
 	.app {
 		display: flex;
 		flex-direction: column;
