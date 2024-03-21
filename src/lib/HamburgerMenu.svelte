@@ -1,27 +1,40 @@
 <script lang="ts">
- // メニューの開閉状態を管理する変数
+ import { onMount } from 'svelte';
+ import { gsap } from 'gsap';
+
+ let menu;
  let isOpen = false;
+
+ function toggleMenu() {
+   isOpen = !isOpen;
+   if (isOpen) {
+     gsap.fromTo(menu, { xPercent: -100 }, { xPercent: 0, duration: 0.5 });
+   } else {
+     gsap.fromTo(menu, { xPercent: 0 }, { xPercent: -100, duration: 0.5 });
+   }
+ }
 </script>
 
-<button class="hamburger" on:click={() => isOpen = !isOpen}>
- ☰
-</button>
+<button on:click={toggleMenu}>☰</button>
 
-{#if isOpen}
- <nav class="menu">
-   <ul>
-     <li><a href="/">Home</a></li>
-     <li><a href="/about">About</a></li>
-     // その他のメニュー項目...
-   </ul>
- </nav>
-{/if}
+<div bind:this={menu} class="menu">
+ <a href="/">Home</a>
+ <a href="/about">About</a>
+</div>
 
 <style>
- .hamburger {
-   /* ハンバーガーボタンのスタイル */
- }
  .menu {
-   /* メニューのスタイル */
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 80%;
+   height: 100%;
+   background-color: #000;
+   color: #fff;
+   transform: translateX(-100%);
+   transition: transform 0.3s ease;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
  }
 </style>
