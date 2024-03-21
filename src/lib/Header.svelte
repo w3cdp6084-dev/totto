@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import HamburgerMenu from './HamburgerMenu.svelte';
 </script>
 
 <header>
@@ -36,6 +37,7 @@
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
+	<HamburgerMenu />
 </header>
 
 <style>
