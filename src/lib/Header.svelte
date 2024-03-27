@@ -4,7 +4,9 @@
 </script>
 
 <header>
-	<HamburgerMenu />
+	<div class="header-container">
+		<img src="/logo.svg" alt="logo" class="logo" />
+	</div>
 </header>
 
 <style lang="scss">

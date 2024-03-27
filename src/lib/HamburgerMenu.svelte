@@ -5,28 +5,30 @@
 
 </script>
 
-<div class="menu-icon">
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
+<div class="menu">
+  <a class="menu-text">Menu</a>
 </div>
 
 
-<style>
-  .menu-icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40px;
-    cursor: pointer;
+<style lang="scss">
+.menu{
+  background-color: #fff;
+  width: 120px;
+  height: 52px;
+  border-radius: 16px;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  .menu-text{
+    font-size: 14px;
+    font-weight: bold;
+    color: #3a3a3a;
+    text-align: center;
+    display: block;
+    padding: 16px 28px;
+    text-decoration: none;
   }
-
-  .dot {
-    width: 6px;
-    height: 6px;
-    background-color: #000;
-    border-radius: 50%;
-  }
+}
 
 
 </style>
