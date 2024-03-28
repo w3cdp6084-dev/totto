@@ -1,34 +1,23 @@
 <script lang="ts">
- import { onMount } from 'svelte';
- import { gsap } from 'gsap';
+  import { gsap } from 'gsap';
+  let button;
 
-
+  function animateButton() {
+    const tl = gsap.timeline();
+    tl.to(button, { width: 500, duration: 1, ease: "power1.inOut" })
+      .to(button, { height: 500, duration: 1, ease: "power1.inOut" });
+  }
 </script>
 
-<div class="menu">
-  <a class="menu-text">Menu</a>
-</div>
+<button bind:this={button} on:click={animateButton} class="animate-button">
+  Click Me
+</button>
 
-
-<style lang="scss">
-.menu{
-  background-color: #fff;
-  width: 120px;
-  height: 52px;
-  border-radius: 16px;
-  position: fixed;
-  bottom: 10%;
-  left: 50%;
-  .menu-text{
-    font-size: 14px;
-    font-weight: bold;
-    color: #3a3a3a;
-    text-align: center;
-    display: block;
-    padding: 16px 28px;
-    text-decoration: none;
+<style>
+  .animate-button {
+    width: 100px; /* 初期幅 */
+    height: 50px; /* 初期高さ */
+    transition: all 0.5s ease-in-out; /* CSSのトランジションを削除 */
+    overflow: hidden; /* テキストがはみ出さないように */
   }
-}
-
-
 </style>
