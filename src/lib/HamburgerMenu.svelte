@@ -1,37 +1,59 @@
 <script lang="ts">
   import { gsap } from 'gsap';
+  import { onMount } from 'svelte';
   let button;
+  let navLinks;
 
   let isOpen = false;
-
-  function toggleNav() {
+  onMount(() => {
+    gsap.from(button, { y: 100, opacity: 0, duration: 1 });
+  });
+  function toggleMenu() {
     if (!isOpen) {
-      // ボタンを水平に400px、その後に垂直に300px伸ばす
       gsap.to(button, { width: 400, duration: 0.5, ease: "power1.inOut" })
         .then(() => {
-          gsap.to(button, { height: 300, duration: 0.5, ease: "power1.inOut" });
+          return gsap.to(button, { height: 300, duration: 0.5, ease: "power1.inOut" });
+        })
+        .then(() => {
+          // ナビゲーションリンクのアニメーションを開始
+          return gsap.to(navLinks, { autoAlpha: 1, duration: 0.5, ease: "power1.inOut" });
         });
     } else {
-      // ボタンを垂直に元のサイズに戻し、その後に水平に戻す
-      gsap.to(button, { height: 50, duration: 0.5, ease: "power1.inOut" })
+      // ナビゲーションリンクを非表示にする
+      gsap.to(navLinks, { autoAlpha: 0, duration: 0.5, ease: "power1.inOut" })
         .then(() => {
-          gsap.to(button, { width: 100, duration: 0.5, ease: "power1.inOut" });
+          return gsap.to(button, { height: 50, duration: 0.5, ease: "power1.inOut" });
+        })
+        .then(() => {
+          return gsap.to(button, { width: 100, duration: 0.5, ease: "power1.inOut" });
         });
     }
     isOpen = !isOpen;
   }
 </script>
 
-<button bind:this={button} on:click={toggleNav} class="nav-button">
-  Menu
-</button>
+<button bind:this={button} on:click={toggleMenu} class="index-viewButton">Menu</button>
+<div bind:this={navLinks} class="nav-links" style="opacity: 0;">
+  <a href="/home">Home</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+</div>
 
 <style>
-  .nav-button {
-    width: 100px; /* 初期幅 */
-    height: 50px; /* 初期高さ */
-    transition: all 0.5s ease-in-out; /* CSSのトランジションを削除 */
-    margin: 0 auto;
-    display: block;
+  .index-viewButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 100px;
+    height: 50px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    /* 初期状態では非表示 */
+    visibility: hidden;
   }
 </style>
