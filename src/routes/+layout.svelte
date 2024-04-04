@@ -2,7 +2,7 @@
 	import Header from '../lib/Header.svelte';
 	import HamburgerMenu from '../lib/HamburgerMenu.svelte';
 	import 'normalize.css';
-	import './styles.css';
+	import '../styles/styles.scss';
 </script>
 
 <div class="app">
