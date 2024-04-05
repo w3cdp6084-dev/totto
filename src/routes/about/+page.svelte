@@ -3,8 +3,13 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
+<script>
+	import Heading from '../../lib/Heading.svelte';
+</script>
+
 <div class="text-column">
-	<h1>About this app</h1>
+	<Heading level={1} text="ABOUT" />
+
 
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
