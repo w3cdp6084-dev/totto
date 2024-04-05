@@ -5,7 +5,7 @@
 
 <header>
 	<div class="header-container">
-		<img src="/logo.svg" alt="logo" class="logo" />
+		<img src="/images/logo.svg" alt="logo" class="logo" />
 	</div>
 </header>
 

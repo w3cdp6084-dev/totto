@@ -2,10 +2,12 @@
 	<title>Contact</title>
 	<meta name="description" content="Contact page" />
 </svelte:head>
+<script>
+	import Heading from '../../lib/Heading.svelte';
+</script>
 
+<Heading level={2} text="contact"/>
 <div class="text-column">
-	<h1>Contact</h1>
-
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
 		following into your command line and following the prompts:
