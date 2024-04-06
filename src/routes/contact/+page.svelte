@@ -56,6 +56,7 @@
 				border: none;
 				background-color: #F6F6F6;
 				height: 36px;
+				outline: none;
 			}
 			textarea	{
 				padding: 8px;
@@ -65,6 +66,7 @@
 				background-color: #F6F6F6;
 				height: 160px;
 				resize: none;
+				outline: none;
 			}
 			label {
 				margin-bottom: 8px;
@@ -105,17 +107,17 @@
 				top: 0;
 				width: 20px;
 				height: 20px;
-				border-radius: 4px; /* 四角形のデザイン */
+				border-radius: 4px;
 				background-color: #F6F6F6;
 				cursor: pointer;
 			}
 
 			.radio-group input[type="radio"]:checked + label:before {
-				background-color: #F6F6F6; /* チェックされたときの背景色 */
+				background-color: #F6F6F6;
 			}
 
 			.radio-group input[type="radio"]:checked + label:after {
-				content: ''; /* チェックマークを示すための内容 */
+				content: ''; 
 				position: absolute;
 				left: 5px;
 				top: 9px;
