@@ -12,32 +12,25 @@
 		<Heading level={3} text="Form" />
 		<form class="form">
 			<label for="name">お名前 <span>必須</span></label>
-			<input type="text" id="name" name="name" />
+			<input type="text" id="name" name="name" class="input" />
 			<label for="email">メールアドレス <span>必須</span></label>
-			<input type="email" id="email" name="email" />
+			<input type="email" id="email" name="email" class="input" />
 			<div class="radio-group">
 				<input type="radio" id="request" name="inquiry-type" value="制作の依頼" />
-  				<label for="request">制作の依頼</label>
-  				<input type="radio" id="partnership" name="inquiry-type" value="パートナーシップ" />
-  				<label for="partnership">パートナーシップ</label>
-  				<input type="radio" id="other" name="inquiry-type" value="その他" />
-  				<label for="other">その他</label>
+				<label for="request">制作の依頼</label>
+				<input type="radio" id="partnership" name="inquiry-type" value="パートナーシップ" />
+				<label for="partnership" class="label-radio">パートナーシップ</label>
+				<input type="radio" id="other" name="inquiry-type" value="その他" />
+				<label for="other" class="label-radio">その他</label>
 			</div>
 			<label for="message">お問い合わせ詳細 (1000文字以内) <span>必須</span></label>
-			<textarea id="message" name="message"></textarea>
+			<textarea id="message" name="message" class="input"></textarea>
 			<button type="submit">送信</button>
 		</form>
 
 
-
-
-
 	</div>
 </div>
-
-
-
-
 
 <style lang="scss">
 	.wrap {
@@ -50,6 +43,9 @@
 		padding: 24px 200px;
 		.form	{
 			display: grid;
+			.label {
+				margin-bottom:40px;
+			}
 			input {
 				padding: 8px;
 				border-radius: 8px;
@@ -57,6 +53,7 @@
 				background-color: #F6F6F6;
 				height: 36px;
 				outline: none;
+				margin-bottom: 40px;
 			}
 			textarea	{
 				padding: 8px;
@@ -80,7 +77,10 @@
 			.radio-group {
 				display: flex;
 				align-items: center;
-				margin-bottom: 16px;
+				margin-bottom: 40px;
+				.label-radio	{
+					margin-left: 16px;
+				}
 			}
 
 			.radio-group label {
