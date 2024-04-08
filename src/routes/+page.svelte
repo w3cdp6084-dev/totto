@@ -1,7 +1,5 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
@@ -9,14 +7,4 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-
-</section>
-
-<style>
-
-
-	h1 {
-		width: 100%;
-	}
-</style>
+<Counter />
