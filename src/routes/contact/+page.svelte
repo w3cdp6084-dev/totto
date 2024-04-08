@@ -27,8 +27,6 @@
 			<textarea id="message" name="message" class="input"></textarea>
 			<button type="submit">送信</button>
 		</form>
-
-
 	</div>
 </div>
 
@@ -43,9 +41,6 @@
 		padding: 24px 200px;
 		.form	{
 			display: grid;
-			.label {
-				margin-bottom:40px;
-			}
 			input {
 				padding: 8px;
 				border-radius: 8px;
