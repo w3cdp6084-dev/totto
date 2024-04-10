@@ -50,11 +50,13 @@
  }
 </script>
 
-<button bind:this={button} on:click={toggleMenu} class="index-viewButton"
- >Menu</button
+<button
+ bind:this={button}
+ on:click={toggleMenu}
+ class="hover-target index-viewButton">Menu</button
 >
 <div bind:this={navLinks} class="nav-links" style="opacity: 0;">
- <a href="/">Home</a>
+ <a href="/" class="hover-target">Home</a>
  <a href="/about">About</a>
  <a href="/contact">Contact</a>
 </div>
