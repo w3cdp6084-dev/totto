@@ -1,7 +1,7 @@
 
 <footer class="footer">
  <div class="container">
-   <p>&copy; 2024. nel All rights reserved.</p>
+   <p>&copy; 2024. nel inc.</p>
  </div>
 </footer>
 
