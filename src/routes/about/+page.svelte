@@ -25,8 +25,16 @@
       <img src="/images/works/mock1.svg" alt="リスト" />
      </a>
     </li>
-    <li><a href="/">item2</a></li>
-    <li><a href="/">item3</a></li>
+    <li>
+     <a href="/">
+      <img src="/images/works/mock1.svg" alt="リスト" />
+     </a>
+    </li>
+    <li>
+     <a href="/">
+      <img src="/images/works/mock1.svg" alt="リスト" />
+     </a>
+    </li>
    </ul>
   </div>
  </div>
