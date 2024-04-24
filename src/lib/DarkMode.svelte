@@ -41,8 +41,8 @@
 
 <style>
  :root.dark-mode {
-  --bg: hsl(var(--hue), 10%, 20%); /* ダークモード用の背景色 */
-  --fg: hsl(var(--hue), 10%, 80%); /* ダークモード用の前景色 */
+  --bg: hsl(var(--hue), 10%, 20%);
+  --fg: hsl(var(--hue), 10%, 80%);
  }
 
  input {
